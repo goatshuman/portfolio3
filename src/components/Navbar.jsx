@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   about,
-  achievements,
   project,
   portfolio,
   skills,
@@ -24,11 +23,6 @@ const NAV_LINKS = [
     title: "project",
     href: "#projects",
     img: project,
-  },
-  {
-    title: "achievements",
-    href: "#achievements",
-    img: achievements,
   },
   {
     title: "skills",
