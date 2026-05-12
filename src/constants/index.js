@@ -23,6 +23,10 @@ import {
     { title: "Cloud & DevOps",       icon: creator },
   ];
 
+  export const testimonials = [];
+
+  export const achievements = [];
+
   export const projects = [
     {
       name: "Snapvault",
@@ -37,7 +41,7 @@ import {
       source_code_link: "https://github.com/goatshuman/snapvault",
       live_link: "https://snapvault.vercel.app",
       tech: ["React", "Tailwind CSS", "Vite"],
-      overview: "Snapvault is a photography portfolio app designed for visual storytelling. It features a minimal gallery interface with smooth transitions, responsive design for all devices, and an intuitive image management flow.",
+      overview: "Snapvault is a photography portfolio app designed for visual storytelling. Minimal gallery interface, smooth transitions, and responsive design for all devices.",
     },
     {
       name: "Luminary Cafe",
@@ -52,7 +56,7 @@ import {
       source_code_link: "https://github.com/goatshuman/luminary-cafe",
       live_link: "https://luminary-cafe.vercel.app",
       tech: ["React", "Framer Motion", "Tailwind CSS"],
-      overview: "Luminary Cafe is an immersive web experience for a modern cafe brand. It features rich visual design, smooth Framer Motion animations, a full menu showcase, and a cozy ambient aesthetic.",
+      overview: "Luminary Cafe is an immersive web experience for a modern cafe brand. Rich visual design, smooth Framer Motion animations, and a cozy ambient aesthetic.",
     },
     {
       name: "Nexa Tasks",
@@ -67,7 +71,7 @@ import {
       source_code_link: "https://github.com/goatshuman/nexa-tasks",
       live_link: "https://nexa-tasks.vercel.app",
       tech: ["React", "TypeScript", "ShadCN UI"],
-      overview: "Nexa Tasks is a modern task management app built for productivity. Drag-and-drop boards, priority levels, due dates, and a distraction-free dark UI built with TypeScript and ShadCN.",
+      overview: "Nexa Tasks is a modern task management app. Drag-and-drop boards, priority levels, due dates, and a distraction-free dark UI with TypeScript and ShadCN.",
     },
     {
       name: "Fitpulse",
@@ -82,7 +86,7 @@ import {
       source_code_link: "https://github.com/goatshuman/fitpulse",
       live_link: "https://fitpulse.vercel.app",
       tech: ["React", "Recharts", "Tailwind CSS"],
-      overview: "Fitpulse is a fitness tracking dashboard to monitor workout progress, set health goals, and visualize stats through interactive charts. Clean dark UI with workout logging.",
+      overview: "Fitpulse is a fitness tracking dashboard for monitoring progress, setting health goals, and visualizing stats through interactive Recharts graphs.",
     },
     {
       name: "Buildflow",
@@ -97,7 +101,7 @@ import {
       source_code_link: "https://github.com/goatshuman/buildflow",
       live_link: "https://buildflow.vercel.app",
       tech: ["React", "TypeScript", "Express"],
-      overview: "Buildflow is a full-stack project management platform with Kanban boards, milestone tracking, and team collaboration features built with React, TypeScript and Express.",
+      overview: "Buildflow is a full-stack project management platform with Kanban boards, milestone tracking, and team collaboration. Built with React, TypeScript and Express.",
     },
   ];
 
