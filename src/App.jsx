@@ -2,6 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 
   import {
     About,
+    Achievement,
     Contact,
     Feedbacks,
     Hero,
@@ -28,37 +29,20 @@ import { BrowserRouter } from "react-router-dom";
                   className="relative z-0"
                   style={{ backgroundColor: "hsl(222.2 84% 4.9%)" }}
                 >
-                  <ErrorBoundary>
-                    <ElasticCursor />
-                  </ErrorBoundary>
-                  <ErrorBoundary>
-                    <EasterEggs />
-                  </ErrorBoundary>
+                  <ErrorBoundary><ElasticCursor /></ErrorBoundary>
+                  <ErrorBoundary><EasterEggs /></ErrorBoundary>
                   <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
                     <Navbar />
-                    <ErrorBoundary>
-                      <Hero />
-                    </ErrorBoundary>
+                    <ErrorBoundary><Hero /></ErrorBoundary>
                   </div>
-                  <ErrorBoundary>
-                    <About />
-                  </ErrorBoundary>
-                  <ErrorBoundary>
-                    <Works />
-                  </ErrorBoundary>
-                  <ErrorBoundary>
-                    <SkillKeyboard />
-                  </ErrorBoundary>
-                  <ErrorBoundary>
-                    <Feedbacks />
-                  </ErrorBoundary>
+                  <ErrorBoundary><StarsCanvas /></ErrorBoundary>
+                  <ErrorBoundary><About /></ErrorBoundary>
+                  <ErrorBoundary><Works /></ErrorBoundary>
+                  <ErrorBoundary><Achievement /></ErrorBoundary>
+                  <SkillKeyboard />
+                  <ErrorBoundary><Feedbacks /></ErrorBoundary>
                   <div className="relative z-0">
-                    <ErrorBoundary>
-                      <Contact />
-                    </ErrorBoundary>
-                    <ErrorBoundary>
-                      <StarsCanvas />
-                    </ErrorBoundary>
+                    <ErrorBoundary><Contact /></ErrorBoundary>
                   </div>
                 </div>
               </BrowserRouter>
