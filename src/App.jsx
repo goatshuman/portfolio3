@@ -39,7 +39,7 @@ import { BrowserRouter } from "react-router-dom";
                   <ErrorBoundary><About /></ErrorBoundary>
                   <ErrorBoundary><Works /></ErrorBoundary>
                   <ErrorBoundary><Achievement /></ErrorBoundary>
-                  <SkillKeyboard />
+                  <ErrorBoundary><SkillKeyboard /></ErrorBoundary>
                   <ErrorBoundary><Feedbacks /></ErrorBoundary>
                   <div className="relative z-0">
                     <ErrorBoundary><Contact /></ErrorBoundary>
