@@ -2,7 +2,6 @@ import { BrowserRouter } from "react-router-dom";
 
   import {
     About,
-    Achievement,
     Contact,
     Feedbacks,
     Hero,
@@ -38,7 +37,6 @@ import { BrowserRouter } from "react-router-dom";
                   <ErrorBoundary><StarsCanvas /></ErrorBoundary>
                   <ErrorBoundary><About /></ErrorBoundary>
                   <ErrorBoundary><Works /></ErrorBoundary>
-                  <ErrorBoundary><Achievement /></ErrorBoundary>
                   <ErrorBoundary><SkillKeyboard /></ErrorBoundary>
                   <ErrorBoundary><Feedbacks /></ErrorBoundary>
                   <div className="relative z-0">
