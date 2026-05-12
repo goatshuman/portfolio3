@@ -12,7 +12,6 @@ import { BrowserRouter } from "react-router-dom";
   } from "./components";
   import EasterEggs from "./components/EasterEggs";
   import ElasticCursor from "./components/ElasticCursor";
-  import SkillKeyboard from "./components/SkillKeyboard";
   import ReactBitsAudioProvider from "./reactbits/context/ReactBitsAudioProvider";
   import ReactBitsCursorProvider from "./reactbits/context/ReactBitsCursorProvider";
   import ErrorBoundary from "./components/ErrorBoundary";
@@ -45,9 +44,6 @@ import { BrowserRouter } from "react-router-dom";
                   </ErrorBoundary>
                   <ErrorBoundary>
                     <Works />
-                  </ErrorBoundary>
-                  <ErrorBoundary>
-                    <SkillKeyboard />
                   </ErrorBoundary>
                   <ErrorBoundary>
                     <Feedbacks />
