@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
   import useParallax from "../reactbits/hooks/useParallax";
   import { styles } from "../styles";
   import useMediaQuery from "../utils/useMediaQuery";
-  import { anshuman } from "../assets";
+  import { ComputersCanvas } from "./canvas";
 
   const Hero = () => {
     const [typedText, setTypedText] = useState("");
     const typedItems = ["Developer", "Freelancer", "Designer", "Learner"];
     const [itemIndex, setItemIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
+    const [isTyping, setIsTyping] = useState(true);
 
     const isMobile = useMediaQuery("(max-width: 768px)");
     const { style: parallaxStyle } = useParallax({
@@ -25,28 +26,32 @@ import { motion } from "framer-motion";
           setTypedText((prevText) => prevText + typedItems[itemIndex][charIndex]);
           setCharIndex(charIndex + 1);
         } else {
+          setIsTyping(false);
           setTimeout(() => {
+            setIsTyping(true);
             setItemIndex((itemIndex + 1) % typedItems.length);
             setCharIndex(0);
             setTypedText("");
           }, 1000);
         }
       };
+
       const typingInterval = setInterval(typeItem, 100);
+
       return () => clearInterval(typingInterval);
     }, [charIndex, itemIndex]);
 
     return (
-      <section className="relative w-full h-screen mx-auto overflow-hidden" id="hero">
+      <section className={`relative w-full h-screen mx-auto`} id="hero">
         <div
-          className={`absolute inset-0 top-[80px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-center gap-8`}
+          className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
         >
           <div className="flex flex-col justify-center items-center mt-5">
             <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
             <div className="w-1 sm:h-80 h-40 violet-gradient" />
           </div>
 
-          <div style={parallaxStyle} className="flex-1">
+          <div style={parallaxStyle}>
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm <span className="text-[#915EFF]">Anshuman</span>
             </h1>
@@ -68,37 +73,16 @@ import { motion } from "framer-motion";
               >
                 {typedText}
               </span>
-              <span className="typed-cursor" aria-hidden="true">|</span>
+              <span className="typed-cursor" aria-hidden="true">
+                |
+              </span>
               <br />
               <b>Bring on the challenges, I'm ready to soak up knowledge!</b>
             </p>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden sm:flex flex-shrink-0"
-            style={parallaxStyle}
-          >
-            <div
-              style={{
-                width: 280,
-                height: 280,
-                borderRadius: "50%",
-                overflow: "hidden",
-                border: "4px solid #915EFF",
-                boxShadow: "0 0 40px rgba(145,94,255,0.4), 0 0 80px rgba(145,94,255,0.15)",
-              }}
-            >
-              <img
-                src={anshuman}
-                alt="Anshuman"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </div>
-          </motion.div>
         </div>
+
+        <ComputersCanvas />
 
         <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
           <a href="#about">
